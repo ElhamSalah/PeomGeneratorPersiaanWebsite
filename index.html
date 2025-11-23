@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <!-- Persian-friendly font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css" />
+    <title>AI Persian Poem Generator</title>
+  </head>
+  <body dir="rtl">
+    <div class="page-bg"></div>
+    <div class="container">
+      <header class="site-header">
+        <h1>AI Persian Poem Generator</h1>
+        <p class="subtitle">یک شعر کوتاه فارسی با الهام از موضوع شما بسازید</p>
+      </header>
+
+      <main>
+        <section class="card form-card">
+          <form id="poem-generator-form" class="poem-form">
+            <input
+              type="text"
+              placeholder="موضوع شعر را وارد کنید (مثال: گل، عشق، پاریس)"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <button type="submit" class="submit-button">تولید شعر</button>
+          </form>
+          <div class="hint">مثال‌ها: گل، پدر، مادر، عشق، انسان</div>
+        </section>
+
+        <section class="card poem-card">
+          <div class="poem hidden" id="poem" aria-live="polite"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          ساخته‌شده توسط
+          <a href="https://elhamsalah.github.io/ElhamaSalahPortfolio/" target="_blank">Elhama Salah</a>
+        </div>
+        <div class="links">
+          <a href="https://github.com/ElhamSalah/PersianPoemGeneratorr" target="_blank">GitHub</a>
+          •
+          <a href="https://persianpoemgenerator.netlify.app/" target="_blank">Live demo</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
